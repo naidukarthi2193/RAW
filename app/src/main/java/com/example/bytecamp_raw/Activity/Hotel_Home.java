@@ -27,31 +27,12 @@ public class Hotel_Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel__home);
-
-        contributions=findViewById(R.id.contri_recycler);
-        contributions.setHasFixedSize(true);
-        contributions.setLayoutManager(new LinearLayoutManager(this));
         listItems=new ArrayList<>();
         listItems.add(new hotel_home_model("12 Jan 2018","12:30 pm","IN PROGRESS",1));
         listItems.add(new hotel_home_model("13 Jan 2018","12:30 pm","DONATED",2));
         listItems.add(new hotel_home_model("14 Jan 2018","12:30 pm","DONATED",2));
         listItems.add(new hotel_home_model("15 Jan 2018","12:30 pm","COMPOST",3));
         listItems.add(new hotel_home_model("16 Jan 2018","12:30 pm","COMPOST",3));
-        contriAdapter = new hotel_home(this,listItems);
-        contributions.setAdapter(contriAdapter);
-
-        card1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-////                Intent intent1 = new Intent(Hotel_Home.this,);
-//                intent1.putExtra("date","12 January 2018");
-//                intent1.putExtra("date","12:30 pm");
-//                intent1.putExtra("date",1);
-//                startActivity(intent1);
-            }
-        });
-
-
 
 
 
