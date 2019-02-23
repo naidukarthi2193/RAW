@@ -32,7 +32,7 @@ public class Hotel_Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel__home);
-//        testData = findViewById(R.id.list_card);
+        testData = findViewById(R.id.list_card_1);
         testData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
