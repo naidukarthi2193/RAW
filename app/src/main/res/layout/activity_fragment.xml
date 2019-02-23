@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/start_loc_name"
                 app:layout_constraintHorizontal_bias="0.94"
                 />
-            <android.support.design.button.MaterialButton
+            <Button
                 android:id="@+id/start_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
                 android:layout_margin="5dp"
                 />
 
-            <android.support.design.button.MaterialButton
+            <Button
                 android:id="@+id/end_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

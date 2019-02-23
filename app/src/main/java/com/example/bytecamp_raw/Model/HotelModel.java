@@ -12,6 +12,29 @@ public class HotelModel {
     String Quantity;
     String SensorReading;
 
+    @Exclude
+    public Location getLocation() {
+        return Location;
+    }
+
+    @Exclude
+    public void setLocation(Location location) {
+        this.Location = location;
+    }
+
+    Location Location;
+
+    @Exclude
+    public String getDescription() {
+        return Description;
+    }
+
+    @Exclude
+    public void setDescription(String description) {
+        Description = description;
+    }
+
+    String Description;
 
     @Exclude
     public String getName() {
@@ -64,11 +87,13 @@ public class HotelModel {
     public HotelModel() {
     }
 
-    public HotelModel(String name, String foodType, String freshness, String quantity, String sensorReading) {
+    public HotelModel(String name, String foodType, String freshness, String quantity, String sensorReading,String description,Location location) {
         Name = name;
         FoodType = foodType;
         Freshness = freshness;
         Quantity = quantity;
         SensorReading = sensorReading;
+        Description = description;
+        Location = location;
     }
 }

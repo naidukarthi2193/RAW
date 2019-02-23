@@ -1,10 +1,12 @@
 package com.example.bytecamp_raw.Model;
 
+import com.google.firebase.database.Exclude;
+
 /**
  * Created by venkat on 23/2/19.
  */
 public class Location {
-    public Location(String lat, String aLong) {
+    public Location(Long lat, Long aLong) {
         Lat = lat;
         Long = aLong;
     }
@@ -12,21 +14,25 @@ public class Location {
     public Location() {
     }
 
-    public String getLat() {
+    @Exclude
+    public Long getLat() {
         return Lat;
     }
 
-    public void setLat(String lat) {
+    @Exclude
+    public void setLat(Long lat) {
         Lat = lat;
     }
 
-    public String getLong() {
+    @Exclude
+    public Long getLong() {
         return Long;
     }
 
-    public void setLong(String aLong) {
+    @Exclude
+    public void setLong(Long aLong) {
         Long = aLong;
     }
 
-    String Lat,Long;
+    Long Lat,Long;
 }
