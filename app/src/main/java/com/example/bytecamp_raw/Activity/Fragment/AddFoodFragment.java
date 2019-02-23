@@ -53,12 +53,12 @@ public class AddFoodFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View view) {
                 myref =  FirebaseDatabase.getInstance().getReference();
-                myref.child("hotel").child(hotelName.getText().toString()).child("FoodType").setValue(foodType.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("Freshness").setValue(foodFresh.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("Quantity").setValue(foodQty.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Lat").setValue("22.539970");
-                myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Long").setValue("88.370240");
-                myref.child("hotel").child(hotelName.getText().toString()).child("DonationTime").setValue(currentTime.toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("FoodType").setValue(foodType.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("Freshness").setValue(foodFresh.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("Quantity").setValue(foodQty.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("Location").child("Lat").setValue("22.539970");
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("Location").child("Long").setValue("88.370240");
+                myref.child("hotel").child(hotelName.getText().toString()).child("1").child("DonationTime").setValue(currentTime.toString());
 
             }
         });
