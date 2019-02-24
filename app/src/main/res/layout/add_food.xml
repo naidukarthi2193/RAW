@@ -89,11 +89,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:dropDownVerticalOffset="-125dp"
                     android:gravity="left"
-                    android:hint="Write Description here."
-                    android:imeOptions="actionDone"
-                    android:singleLine="true" />
+                    android:hint="Write Description here."/>
 
             </LinearLayout>
 

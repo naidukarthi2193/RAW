@@ -61,7 +61,7 @@ public class AddFoodFragment extends BottomSheetDialogFragment {
                 myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Lat").setValue("22.539970");
                 myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Long").setValue("88.370240");
                 myref.child("hotel").child(hotelName.getText().toString()).child("DonationTime").setValue(currentTime.toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("Description").setValue(foodDescription.toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Description").setValue(foodDescription.getText().toString());
 
 //
 //                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Name").setValue(hotelName.getText().toString());

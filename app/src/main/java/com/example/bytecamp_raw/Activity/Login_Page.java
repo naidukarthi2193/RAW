@@ -1,6 +1,7 @@
 package com.example.bytecamp_raw.Activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,8 +38,12 @@ public class Login_Page extends AppCompatActivity {
         volunteer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mDatabase.child("volunteer").child("username").child("name").setValue(userName.getText().toString());
-                mDatabase.child("volunteer").child("username").child("count").setValue(0);
+                SharedPreferences.Editor editor = getSharedPreferences("MY_PREFS_NAME", MODE_PRIVATE).edit();
+                editor.putString("name", userName.getText().toString());
+                editor.apply();
+
+                mDatabase.child("volunteer").child(userName.getText().toString()).child("name").setValue(userName.getText().toString());
+                mDatabase.child("volunteer").child(userName.getText().toString()).child("count").setValue(0);
                 Intent volunteerIntent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(volunteerIntent);
             }

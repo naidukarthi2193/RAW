@@ -27,8 +27,9 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
     public HotelsAdapter(ArrayList<HotelModel> hotelModels, Context context) {
         this.hotelModels = hotelModels;
         this.context = context;
+        Log.d(TAG, "HotelsAdapter: size " + hotelModels.size());
     }
-    ArrayList<HotelModel> hotelModels;
+    public ArrayList<HotelModel> hotelModels;
     Context context;
 
     @NonNull
