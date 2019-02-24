@@ -57,9 +57,7 @@ public class CollectionFragment extends Fragment {
                             hotelList.add(uniquesnapshot.getValue(HotelModel.class));
                         }
                 }
-                recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
-                Log.d(TAG, "onDataChange: " + adapter.getItemCount());
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
