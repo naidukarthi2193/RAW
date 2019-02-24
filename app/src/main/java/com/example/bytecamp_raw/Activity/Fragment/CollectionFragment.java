@@ -1,5 +1,8 @@
 package com.example.bytecamp_raw.Activity.Fragment;
 
+import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -57,7 +60,7 @@ public class CollectionFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot uniquesnapshot : dataSnapshot.getChildren()){
-                        Log.d("DetailActivity ", "Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
+//                        Log.d("DetailActivity ", "Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
                             hotelList.add(uniquesnapshot.getValue(HotelModel.class));
                 }
 
@@ -78,6 +81,7 @@ public class CollectionFragment extends Fragment {
             this.context = context;
             Log.d(ContentValues.TAG, "HotelsAdapter: size " + hotelList.size());
         }
+
         Context context;
 
         @NonNull
@@ -98,6 +102,7 @@ public class CollectionFragment extends Fragment {
             myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
                     Intent Detailes = new Intent(context, MissionDetail.class);
                     Detailes.putExtra("name",hotelModel.getName());
                     context.startActivity(Detailes);

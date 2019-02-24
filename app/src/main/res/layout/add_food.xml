@@ -193,7 +193,7 @@
             android:padding="12dp"
             android:text="CONFIRM"
             android:textColor="@color/white"
-            app:backgroundTint="?colorPrimary" />
+            android:background="@drawable/mybutton" />
 
         <!--<View-->
         <!--android:layout_width="match_parent"-->

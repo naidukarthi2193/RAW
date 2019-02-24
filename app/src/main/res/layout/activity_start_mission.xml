@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:text="HardWare Verification"
                 android:textColor="#fff"
-                android:background="@color/colorAccent"
+                android:background="@drawable/mybutton"
                 />
             <TextView
                 android:id="@+id/step2"
@@ -81,6 +81,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/hardwarebutton"
                 app:layout_constraintBottom_toTopOf="@+id/checkboxEdible"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 />
             <CheckBox
                 android:id="@+id/checkboxEdible"
@@ -108,7 +109,7 @@
 
                 android:text="Human Verification"
                 android:textColor="#fff"
-                android:background="@color/colorAccent"
+                android:background="@drawable/mybutton"
 
                 />
         </android.support.constraint.ConstraintLayout>

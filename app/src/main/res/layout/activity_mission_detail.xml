@@ -205,6 +205,8 @@
                 app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintTop_toBottomOf="@+id/start_add"
                 android:layout_margin="5dp"
+                android:background="@drawable/mybutton"
+                android:textColor="#fff"
                 />
 
             <Button
@@ -213,11 +215,13 @@
                 android:layout_height="wrap_content"
                 android:text="Get Direction"
                 android:textAllCaps="false"
+                android:textColor="#fff"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintTop_toBottomOf="@+id/start_add"
                 android:layout_margin="5dp"
+                android:background="@drawable/mybutton"
                 />
 
         </android.support.constraint.ConstraintLayout>
@@ -226,7 +230,7 @@
     </android.support.v7.widget.CardView>
     <Button
         android:id="@+id/join_button"
-        android:background="@color/colorAccent"
+        android:background="@drawable/mybutton"
         app:layout_constraintTop_toBottomOf="@+id/location_card"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
