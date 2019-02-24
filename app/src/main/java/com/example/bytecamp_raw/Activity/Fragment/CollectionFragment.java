@@ -52,7 +52,7 @@ public class CollectionFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot uniquesnapshot : dataSnapshot.getChildren()){
-                        Log.d("DetailActivity ", "Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
+//                        Log.d("DetailActivity ", "Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
                         if (model != null) {
                             hotelList.add(uniquesnapshot.getValue(HotelModel.class));
                         }
