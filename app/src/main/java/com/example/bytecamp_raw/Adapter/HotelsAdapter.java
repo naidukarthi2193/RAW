@@ -1,6 +1,9 @@
 package com.example.bytecamp_raw.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.bytecamp_raw.Activity.MissionDetail;
 import com.example.bytecamp_raw.Model.HotelModel;
 import com.example.bytecamp_raw.R;
 
@@ -20,10 +24,12 @@ import static android.content.ContentValues.TAG;
  */
 public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHolder> {
 
-    public HotelsAdapter(ArrayList<HotelModel> hotelModels) {
+    public HotelsAdapter(ArrayList<HotelModel> hotelModels, Context context) {
         this.hotelModels = hotelModels;
+        this.context = context;
     }
     ArrayList<HotelModel> hotelModels;
+    Context context;
 
     @NonNull
     @Override
@@ -36,10 +42,18 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
 
 
     @Override
-    public void onBindViewHolder(@NonNull HotelsAdapter.MyViewHolder myViewHolder, int i) {
-                HotelModel hotelModel = hotelModels.get(i);
+    public void onBindViewHolder(@NonNull final HotelsAdapter.MyViewHolder myViewHolder, int i) {
+                final HotelModel hotelModel = hotelModels.get(i);
                 myViewHolder.hotelName.setText(hotelModel.getFoodType());
                 myViewHolder.description.setText(hotelModel.getDescription());
+                myViewHolder.cardView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent Detailes = new Intent(context, MissionDetail.class);
+                        Detailes.putExtra("name",hotelModel.getName());
+                        context.startActivity(Detailes);
+                    }
+                });
         Log.d("HotelsAdapter", "onBindViewHolder: " + hotelModel.getName());
     }
 
@@ -50,11 +64,13 @@ public class HotelsAdapter extends RecyclerView.Adapter<HotelsAdapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView hotelName, description, year, genre;
+        CardView cardView;
 
         public MyViewHolder(View view) {
             super(view);
             hotelName = (TextView) view.findViewById(R.id.hotel_nm);
             description = (TextView) view.findViewById(R.id.hotel_desptn);
+            cardView = view.findViewById(R.id.card_view);
         }
     }
 }

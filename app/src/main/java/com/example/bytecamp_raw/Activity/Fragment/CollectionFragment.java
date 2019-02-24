@@ -43,24 +43,21 @@ public class CollectionFragment extends Fragment {
         View view = inflater.inflate(R.layout.collection_fragment, container, false);
         recyclerView = view.findViewById(R.id.recycler_collection);
         hotelList = new ArrayList<HotelModel>();
-        adapter = new HotelsAdapter(hotelList);
+        adapter = new HotelsAdapter(hotelList,getActivity());
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayout.VERTICAL,false);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        recyclerView.setLayoutManager(layoutManager);
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("hotel").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot uniquesnapshot : dataSnapshot.getChildren()){
-                    Log.d("DetailActivity", "onDataChange: " + uniquesnapshot.getValue());
-                    Log.d("DetailActivity ","Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
-                    model = uniquesnapshot.getValue(HotelModel.class);
-                    Log.d(TAG, "onDataChange: " + model.getName());
-                    if (model!=null) {
-                        hotelList.add(uniquesnapshot.getValue(HotelModel.class));
+                        Log.d("DetailActivity ", "Food Type " + uniquesnapshot.getValue(HotelModel.class).getName());
+                        if (model != null) {
+                            hotelList.add(uniquesnapshot.getValue(HotelModel.class));
                         }
                 }
-//                recyclerView.setAdapter(adapter);
+                recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
                 Log.d(TAG, "onDataChange: " + adapter.getItemCount());
             }
@@ -69,7 +66,6 @@ public class CollectionFragment extends Fragment {
 
             }
         });
-        adapter.notifyDataSetChanged();
         return view;
     }
 }

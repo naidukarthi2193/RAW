@@ -10,7 +10,19 @@ public class HotelModel {
     String FoodType;
     String Freshness;
     String Quantity;
+
+    @Exclude
+    public String getDonationTime() {
+        return DonationTime;
+    }
+
+    @Exclude
+    public void setDonationTime(String donationTime) {
+        DonationTime = donationTime;
+    }
+
     String SensorReading;
+    String DonationTime;
 
     @Exclude
     public Location getLocation() {

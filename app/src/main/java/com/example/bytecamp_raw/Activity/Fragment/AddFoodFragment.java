@@ -54,24 +54,24 @@ public class AddFoodFragment extends BottomSheetDialogFragment {
             @Override
             public void onClick(View view) {
                 myref =  FirebaseDatabase.getInstance().getReference();
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Name").setValue(hotelName.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("FoodType").setValue(foodType.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Freshness").setValue(foodFresh.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Quantity").setValue(foodQty.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Location").child("Lat").setValue("22.539970");
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Location").child("Long").setValue("88.370240");
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("DonationTime").setValue(currentTime.toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("collection").child("Description").setValue(foodDescription.toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Name").setValue(hotelName.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("FoodType").setValue(foodType.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Freshness").setValue(foodFresh.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Quantity").setValue(foodQty.getText().toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Lat").setValue("22.539970");
+                myref.child("hotel").child(hotelName.getText().toString()).child("Location").child("Long").setValue("88.370240");
+                myref.child("hotel").child(hotelName.getText().toString()).child("DonationTime").setValue(currentTime.toString());
+                myref.child("hotel").child(hotelName.getText().toString()).child("Description").setValue(foodDescription.toString());
 
-
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Name").setValue(hotelName.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("FoodType").setValue(foodType.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Freshness").setValue(foodFresh.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Quantity").setValue(foodQty.getText().toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Location").child("Lat").setValue("22.539970");
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Location").child("Long").setValue("88.370240");
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("DonationTime").setValue(currentTime.toString());
-                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Description").setValue(foodDescription.toString());
+//
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Name").setValue(hotelName.getText().toString());
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("FoodType").setValue(foodType.getText().toString());
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Freshness").setValue(foodFresh.getText().toString());
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Quantity").setValue(foodQty.getText().toString());
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Location").child("Lat").setValue("22.539970");
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Location").child("Long").setValue("88.370240");
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("DonationTime").setValue(currentTime.toString());
+//                myref.child("hotel").child(hotelName.getText().toString()).child("distribution").child("Description").setValue(foodDescription.toString());
 
             }
         });
