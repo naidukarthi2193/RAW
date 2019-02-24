@@ -41,6 +41,7 @@
                 android:layout_margin="20dp"
                 />
             <TextView
+                android:textStyle="bold"
                 android:id="@+id/name"
                 android:text="Hotel Name"
                 android:layout_width="wrap_content"
@@ -53,6 +54,8 @@
                 android:layout_margin="5dp"/>
 
             <TextView
+
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/quantity"
                 android:layout_margin="5dp"
                 android:id="@+id/type"
@@ -65,6 +68,7 @@
                 app:layout_constraintHorizontal_bias="0.15"/>
 
             <TextView
+                android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:id="@+id/quantity"
                 android:text="Quantity"
@@ -77,6 +81,7 @@
                 app:layout_constraintHorizontal_bias="0.15"/>
 
             <TextView
+                android:textStyle="bold"
                 android:layout_margin="5dp"
                 android:id="@+id/fresh"
                 android:text="Expected Freshness"
@@ -89,6 +94,7 @@
                 app:layout_constraintHorizontal_bias="0.15"/>
 
             <TextView
+                android:text="Rangoli"
                 android:id="@+id/name_setter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,6 +113,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/name"
                 app:layout_constraintBottom_toTopOf="@+id/quantity_setter"
                 android:layout_margin="5dp"
+                android:text="Fried"
                 />
             <TextView
                 android:id="@+id/quantity_setter"
@@ -117,6 +124,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/name"
                 android:layout_margin="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/fresh_setter"
+                android:text="8 kgs"
                 />
             <TextView
                 android:id="@+id/fresh_setter"
@@ -126,6 +134,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/name"
                 android:layout_margin="5dp"
+                android:text="3-4 Hrs"
                 app:layout_constraintBottom_toBottomOf="parent"
                 />
 
@@ -148,14 +157,12 @@
         app:layout_constraintTop_toBottomOf="@+id/carddetails"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.3"
-        android:background="@color/colorAccent"
+        android:background="@drawable/mybutton"
         android:textColor="#fff"
         android:text="Start Mission  >>"
         android:textAllCaps="false"
         android:textSize="20dp"
         android:textStyle="bold"
-
-
         />
 
 </android.support.constraint.ConstraintLayout>
